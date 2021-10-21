@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+
 include('config/db_connect.php');
 if (!isset($_GET['id'])) header('Location: error.php');
 $id = $_GET['id'];
@@ -20,7 +20,7 @@ $age = $recipient['reci_age'];
 
 $group = $recipient['reci_bgrp'];
 
-echo $selectSex = $recipient['reci_sex'];
+$selectSex = $recipient['reci_sex'];
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $quantity = $_POST['quantity'];
@@ -70,12 +70,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input required name="age" type="text" value="<?php echo htmlspecialchars($age); ?>" class="form-control" id="exampleFormControlInput1">
         </div>
         <div class="form-group mt-2">
-            <label for="exampleFormControlInput1">nhóm máu</label>
+            <label for="exampleFormControlInput1">Nhóm máu</label>
             <input required name="group" type="text" value="<?php echo htmlspecialchars($group); ?>" class="form-control" id="exampleFormControlInput1">
         </div>
         <div class="form-group mt-2">
             <label for="exampleFormControlInput1">Số lượng máu cần nhận</label>
-            <input required name="quantity" type="text" value=" <?php echo htmlspecialchars($quantity); ?>" class="form-control" id="exampleFormControlInput1" placeholder="quantity ">
+            <input required name="quantity" type="text" value="<?php echo htmlspecialchars($quantity); ?>" class="form-control" id="exampleFormControlInput1" placeholder="quantity ">
         </div>
 
 

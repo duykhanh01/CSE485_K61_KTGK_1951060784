@@ -27,7 +27,10 @@ $recipients = mysqli_fetch_all($res, MYSQLI_ASSOC);
                                 <th scope="col">Họ và tên</th>
                                 <th scope="col">Tuổi</th>
                                 <th scope="col">Nhóm máu</th>
-                                <th scope="col">Chi tiết</th>
+                                <th scope="col">Số lượng máu cần nhận (ml)</th>
+                                <th scope="col">Giới tính</th>
+                                <th scope="col">Ngày đăng kí nhận máu</th>
+                                <th scope="col">Số điện thoại</th>
                                 <th scope="col">Sửa</th>
                                 <th scope="col">Xoá</th>
 
@@ -41,39 +44,16 @@ $recipients = mysqli_fetch_all($res, MYSQLI_ASSOC);
                                     <td><?php echo $recipient['reci_name'] ?> </td>
                                     <td><?php echo $recipient['reci_age'] ?> </td>
                                     <td><?php echo $recipient['reci_bgrp'] ?> </td>
-
-                                    <td><a class="text-primary view" onclick="loadData(this.getAttribute('data-id'));" data-id="<?php echo $recipient['reci_id']; ?>" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <i class="fas fa-eye"></i>
-                                        </a>
-                                    </td>
-
-                                    <td><a class=" text-primary" href="edit.php?id=<?php echo $recipient['reci_id']; ?>"><i class="fas fa-edit "></i></a></td>
+                                    <td><?php echo $recipient['reci_bqnty'] ?> </td>
+                                    <td><?php echo $recipient['reci_sex'] ?> </td>
+                                    <td><?php echo $recipient['reci_reg_date'] ?> </td>
+                                    <td><?php echo $recipient['reci_phno'] ?> </td>
+                                    <td><a class="text-primary" href="edit.php?id=<?php echo $recipient['reci_id']; ?>"><i class="fas fa-edit "></i></a></td>
                                     <td><a class="text-danger" href="delete.php?id=<?php echo $recipient['reci_id']; ?>"><i class="fas fa-trash"></i></a></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
-
                     </table>
-                    <!-- Button trigger modal -->
-
-
-                    <!-- Modal -->
-                    <div class=" modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-xl">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Chi tiết</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

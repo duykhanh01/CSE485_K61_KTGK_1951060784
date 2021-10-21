@@ -63,7 +63,7 @@ if (isset($_GET['submit_unit'])) {
         </div>
         <div class="text-primary"> <?php echo $errors['age']; ?> </div>
         <div class="form-group mt-2">
-            <label for="exampleFormControlInput1">nhóm máu</label>
+            <label for="exampleFormControlInput1">Nhóm máu</label>
             <input required name="group" type="text" value="<?php echo htmlspecialchars($group); ?>" class="form-control" id="exampleFormControlInput1">
         </div>
         <div class="text-primary"> <?php echo $errors['group']; ?> </div>

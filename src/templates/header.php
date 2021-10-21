@@ -47,8 +47,8 @@
           </ul>
 
           <div class="auth">
-            <a class="btn btn-primary m-1" href="login.php">Đăng nhập</a>
-            <a class="btn btn-primary" href="register.php">Đăng ký</a>
+            <a class="btn btn-primary m-1" href="#">Đăng nhập</a>
+            <a class="btn btn-primary" href="#">Đăng ký</a>
           </div>
 
 
